@@ -54,4 +54,17 @@ CREATE INDEX idx_staff_employee_id ON staff(employee_id);
 CREATE INDEX idX_staff_department_id ON staff(department_id);
 CREATE INDEX idx_staff_deleted_at ON staff(deleted_at) WHERE deleted_at IS NULL;
 
-COMMENT ON TABLE staff IS 'all staffs members.Authenication handle by user table';
+COMMENT ON TABLE staff IS 'all staffs members(teachers,admin,managers,etc..).Authenication handled by user table';
+COMMENT ON COLUMN staff.employee_id IS 'unique employee identifier';
+COMMENT ON COLUMN staff.name IS 'full name of staff member';
+COMMENT ON COLUMN staff.department_id IS 'references department_id';
+COMMENT ON COLUMN staff.reporting_to IS 'self reference(manager by supervisor of this staff member)';
+COMMENT ON COLUMN staff.salary IS 'monthly salary';
+COMMENT ON COLUMN staff.qualifications IS 'json array of qualifications :[{degree,institution,year}]';
+COMMENT ON COLUMN staff.bank_details IS 'json object:{account_no,ifsc,bank_name}';
+COMMENT ON COLUMN staff.employee_status IS 'current employement status';
+COMMENT ON COLUMN staff.is_teaching IS 'true if this staff member is a teaching faculty';
+COMMENT ON COLUMN staff.can_approval_leave IS 'whether this staff can approve applications';
+COMMENT ON COLUMN staff.hostel_id IS 'if staff is a warden ,references hostel.id(fk add later )';
+COMMENT ON COLUMN staff.deleted_at IS 'soft delete timestamp';
+
