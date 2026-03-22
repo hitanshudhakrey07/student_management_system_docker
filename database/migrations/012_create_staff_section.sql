@@ -2,11 +2,11 @@
 =================================================
 FILE INFORMATION
 =================================================
-File Name     :012_create_staff_attendence.sql
+File Name     :012_create_staff_section.sql
 Developer     :Hitanshu Dhakrey
 Contact       :hitanshudhakrey07@gmail.com
 version       :1.0.0
-Date          :2026-03-21
+Date          :2026-03-22
 Description   :created the `staff_section` table for the faculty section allotment.
                This is the twelveth table in migration order.
 =================================================
